@@ -26,6 +26,11 @@ bot = commands.Bot(command_prefix=prefix, intents = discord.Intents.all())
 bot.remove_command('help')
 intents.members = True
 
+#databse
+async def create_db_pool():
+    bot.pg_con = await asyncpg.create_pool(database_url)
+    print("---database Connected---")
+
 #Ready
 @bot.event
 async def on_ready():
@@ -47,4 +52,5 @@ if __name__ == "__main__":
             print(f'Error loading {values}', file=sys.stderr)
             traceback.print_exc()
 
+bot.loop.run_until_complete(create_db_pool())
 bot.run(token)
