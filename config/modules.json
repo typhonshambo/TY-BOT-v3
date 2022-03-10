@@ -1,0 +1,12 @@
+{
+    "extensions":
+    [
+        "commands.moderation.kick",
+        "commands.moderation.ban",
+
+        "commands.misc.avatar",
+        "commands.misc.memberinfo",
+        "commands.misc.ping"
+    ]
+   
+}
