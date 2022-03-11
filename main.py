@@ -7,6 +7,7 @@ import sys
 import asyncpg
 from asyncpg.pool import create_pool
 import json
+import keep_alive
 
 with open ('config/botconfig.json', 'r') as f:
     config = json.load(f)
@@ -52,5 +53,6 @@ if __name__ == "__main__":
             print(f'Error loading {values}', file=sys.stderr)
             traceback.print_exc()
 
+keep_alive.keep_alive()
 bot.loop.run_until_complete(create_db_pool())
 bot.run(token)
