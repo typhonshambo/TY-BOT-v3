@@ -1,5 +1,6 @@
 language = "python3"
 run = """
 pip install git+https://github.com/Pycord-Development/pycord
+pip install easy-pil==0.0.9
 python3 main.py
 """
