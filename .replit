@@ -1,2 +1,5 @@
 language = "python3"
-run = "python3 main.py"
+run = """
+pip install git+https://github.com/Pycord-Development/pycord
+python3 main.py
+"""
