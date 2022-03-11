@@ -6,7 +6,10 @@
 
         "commands.misc.avatar",
         "commands.misc.memberinfo",
-        "commands.misc.ping"
+        "commands.misc.ping",
+        "commands.misc.level",
+
+        "commands.ready.database"
     ]
    
 }

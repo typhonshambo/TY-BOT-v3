@@ -29,13 +29,13 @@ intents.members = True
 #databse
 async def create_db_pool():
     bot.pg_con = await asyncpg.create_pool(database_url)
-    print("---database Connected---")
+    print("[\] DATABASE CONNECTED")
 
 #Ready
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.watching, name="DMs for help") )
-    print("---BOT ONLINE---")
+    print("[\] BOT ONLNE")
 
 
 #modules Importing
