@@ -16,7 +16,7 @@ class memberinfo(commands.Cog):
 		description="sends latency of BOT",
 		guild_ids=guilds
 	)
-	async def userinfo(self, ctx, member: Option(discord.Member, "Mention a user",required=False, default=None)):
+	async def userinfo(self, ctx, member: Option(discord.Member, "Mention a user",required=False)):
 		
 		
 		

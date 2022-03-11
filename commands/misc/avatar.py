@@ -16,7 +16,7 @@ class avatar(commands.Cog):
 		guild_ids=guilds
 	)
 	
-	async def avatar(self, ctx, member: Option(discord.Member, "Mention a user",required=False, default=None)):
+	async def avatar(self, ctx, member: Option(discord.Member, "Mention a user",required=False)):
 		if member == None :
 			member= ctx.author
 			embed= discord.Embed(title='User Avatar:' , color=0x02FCCF,url=f"{member.avatar.url}")

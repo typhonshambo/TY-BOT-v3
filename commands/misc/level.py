@@ -43,7 +43,7 @@ class slashLevel(commands.Cog):
 	async def level(
 		self, 
 		ctx, 
-		member: Option(discord.Member, "Mention a user",required=False, default=None)
+		member: Option(discord.Member, "Mention a user",required=False)
 	):
 		await ctx.response.defer()
 		member = ctx.author if not member else member

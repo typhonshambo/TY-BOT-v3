@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.commands import Option, slash_command, SlashCommandGroup
 from discord.ext.commands import has_permissions, MissingPermissions, MissingRequiredArgument
 import json
+import sys
 
 with open ('././config/guilds.json', 'r') as f:
 	data = json.load(f)
@@ -20,7 +21,7 @@ class slashBan(commands.Cog):
 	async def ban(
 		self, 
 		ctx, 
-		member: Option(discord.Member, "Mention a user",required=True, default=None),
+		member: Option(discord.Member, "Mention a user",required=True),
 		reason: Option(str, "Provide reason", required=False)
 		):
 		await ctx.response.defer()
@@ -66,10 +67,12 @@ class slashBan(commands.Cog):
 	async def unban(
 		self, 
 		ctx, 
-		member: Option(discord.Member, "Mention a user",required=True, default=None),
+		member: Option(discord.Member, "Mention a user",required=True),
 		):
 			await ctx.response.defer()
 			banned_users = await ctx.guild.bans()
+			
+		
 			for ban_entry in banned_users:
 				user = ban_entry.user
 
@@ -81,13 +84,18 @@ class slashBan(commands.Cog):
 						timestamp=discord.utils.utcnow()
 					)
 					await ctx.respond(embed=unban_msg)
-				else:
-					msg=discord.Embed(
-						description=f"`{member}` is already unbanned!",
-						color=0xA902FC,
-						timestamp=discord.utils.utcnow()
-					)
-					await ctx.respond(embed=msg)	
+					sys.exit()
+
+			msg=discord.Embed(
+				description=f"`{member}` is already unbanned!",
+				color=0xA902FC,
+				timestamp=discord.utils.utcnow()
+			)
+			await ctx.respond(embed=msg)
+
+
+
+
 	@unban.error
 	async def unban_error(self, ctx, error):
 		if isinstance(error, MissingPermissions):

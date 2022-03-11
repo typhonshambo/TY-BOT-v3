@@ -20,7 +20,7 @@ class slashKick(commands.Cog):
 	async def kick(
 		self, 
 		ctx, 
-		member: Option(discord.Member, "Mention a user",required=False, default=None),
+		member: Option(discord.Member, "Mention a user",required=False),
 		reason: Option(str, "Provide reason", required=False)
 		):
 		await ctx.response.defer()
