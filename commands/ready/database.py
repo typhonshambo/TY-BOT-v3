@@ -16,7 +16,9 @@ class database(commands.Cog):
 			guild_id character varying,
 			lvl integer,
 			user_id character varying NOT NULL,
-			xp integer
+			xp integer,
+			background character varying,
+			color character varying
 		);
 		""")
 		print("[\] DATABASE READY")
