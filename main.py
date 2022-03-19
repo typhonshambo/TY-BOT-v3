@@ -8,14 +8,13 @@ import asyncpg
 from asyncpg.pool import create_pool
 import json
 import keep_alive
-from boto.s3.connection import S3Connection
 
 
+token = os.environ.get("token")
+prefix = os.environ.get("prefix")
+database_url = os.environ.get("database_url")
 
-# for heroku
-token= S3Connection(os.environ['token'], None)
-prefix= S3Connection(os.environ['prefix'], None)
-database_url= S3Connection(os.environ['database_url'], None)
+
 
 
 
