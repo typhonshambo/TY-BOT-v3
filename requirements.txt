@@ -2,3 +2,4 @@ py-cord==2.0.0b5
 easy-pil==0.0.9
 asyncpg
 boto3
+flask
