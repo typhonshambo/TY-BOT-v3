@@ -8,6 +8,7 @@ import asyncpg
 from asyncpg.pool import create_pool
 import json
 import keep_alive
+from boto.s3.connection import S3Connection
 
 with open ('config/botconfig.json', 'r') as f:
     config = json.load(f)
@@ -21,6 +22,13 @@ token = os.environ.get("token")
 prefix = os.environ.get("prefix")
 database_url = os.environ.get("database_url")
 '''
+
+# for heroku
+token= S3Connection(os.environ['token'], None)
+prefix= S3Connection(os.environ['prefix'], None)
+database_url= S3Connection(os.environ['database_url'], None)
+
+
 
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=prefix, intents = discord.Intents.all())
