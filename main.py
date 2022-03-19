@@ -10,18 +10,7 @@ import json
 import keep_alive
 from boto.s3.connection import S3Connection
 
-with open ('config/botconfig.json', 'r') as f:
-    config = json.load(f)
-    token = config['token']
-    prefix = config['prefix']
-    database_url = config['database_url']
 
-# for replit
-'''
-token = os.environ.get("token")
-prefix = os.environ.get("prefix")
-database_url = os.environ.get("database_url")
-'''
 
 # for heroku
 token= S3Connection(os.environ['token'], None)
