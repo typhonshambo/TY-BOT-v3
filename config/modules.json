@@ -9,7 +9,9 @@
         "commands.misc.memberinfo",
         "commands.misc.ping",
         "commands.misc.level",
-        "commands.misc.tags",
+        
+
+        "commands.fun.tictaktoe",
 
         "commands.ready.database"
     ]
