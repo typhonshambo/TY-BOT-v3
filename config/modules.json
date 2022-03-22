@@ -3,6 +3,7 @@
     [
         "commands.moderation.kick",
         "commands.moderation.ban",
+        "commands.moderation.mute",
 
         "commands.misc.avatar",
         "commands.misc.memberinfo",
