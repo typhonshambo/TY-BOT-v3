@@ -67,7 +67,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="tickle")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} tickeled {member.mention}",colour=0xFC7EF5, title="tickle")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
@@ -93,7 +93,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="slap")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} slapped {member.mention}",colour=0xFC7EF5, title="slap")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
@@ -120,7 +120,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="hug")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} hugged {member.mention}",colour=0xFC7EF5, title="hug")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
@@ -147,7 +147,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="smug")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} smudged {member.mention}",colour=0xFC7EF5, title="smug")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
@@ -174,7 +174,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="kiss")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} kissed {member.mention}",colour=0xFC7EF5, title="kiss")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
@@ -201,7 +201,7 @@ class slashAnime(commands.Cog):
 				embed.set_footer(text=f"┗Requested by {ctx.author}")
 
 
-				embed2 = discord.Embed(description=f"> {ctx.author.mention} fed {member.mention}",colour=0xFC7EF5, title="pat")
+				embed2 = discord.Embed(description=f"> {ctx.author.mention} patted {member.mention}",colour=0xFC7EF5, title="pat")
 				embed2.set_image(url=url)
 				embed2.set_footer(text=f"┗Requested by {ctx.author}")
 				
