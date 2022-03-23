@@ -15,6 +15,7 @@
         "commands.fun.wiki",
         "commands.fun.google",
         "commands.fun.nitro",
+        "commands.fun.anime",
 
         "commands.ready.database"
     ]
