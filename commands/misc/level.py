@@ -59,9 +59,9 @@ class slashLevel(commands.Cog):
 		ctx, 
 		member: Option(discord.Member, "Mention a user",required=False)
 	):
-			await ctx.response.defer()
+		await ctx.response.defer()
 		
-		#try:
+		try:
 			member = ctx.author if not member else member
 			member_id = str(member.id)
 			guild_id = str(ctx.guild.id)
@@ -130,12 +130,12 @@ class slashLevel(commands.Cog):
 
 					file = File(fp=background.image_bytes, filename="card.png")
 					await ctx.respond(file=file)
-		# except:
-		# 	embed = discord.Embed(
-		# 		color = discord.Color.random(),
-		# 		description="> Some error occurred!\nMaybe sending some messages may work!"
-		# 	)	
-		# 	await ctx.respond(embed=embed)
+		except:
+			embed = discord.Embed(
+				color = discord.Color.random(),
+				description="> Some error occurred!\nMaybe sending some messages may work!"
+			)	
+			await ctx.respond(embed=embed)
 	
 
 	@levelCmd.command(
