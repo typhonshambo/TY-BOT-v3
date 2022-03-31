@@ -1,7 +1,6 @@
 {
     "token" : "",
     "prefix" : "",
-    "database_url" : ""
     "database_url" : "",
     "welcomeWebhookUrl" : ""
 }
