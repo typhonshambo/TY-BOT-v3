@@ -12,7 +12,7 @@ import keep_alive
 
 token = os.environ.get("token")
 prefix = os.environ.get("prefix")
-database_url = os.environ.get("database_url")
+database_url = os.environ.get("DATABASE_URL")
 
 
 
