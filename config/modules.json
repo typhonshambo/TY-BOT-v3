@@ -18,7 +18,8 @@
         "commands.fun.nitro",
         "commands.fun.anime",
 
-        "commands.ready.database"
+        "commands.ready.database",
+        "commands.ready.welcome"
     ]
    
 }
