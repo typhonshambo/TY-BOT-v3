@@ -3,10 +3,9 @@ from discord import Webhook
 from discord.ext import commands
 import json
 import aiohttp
+import os
 
-with open ('././config/botconfig.json', 'r') as f:
-	data = json.load(f)
-	webhookUrl = data['welcomeWebhookUrl']
+webhookUrl = os.environ.get['welcomeWebhookUrl']
 
 
 class welcomer(commands.Cog):
