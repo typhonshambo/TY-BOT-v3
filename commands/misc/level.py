@@ -59,9 +59,9 @@ class slashLevel(commands.Cog):
 		ctx, 
 		member: Option(discord.Member, "Mention a user",required=False)
 	):
-		await ctx.response.defer()
+			await ctx.response.defer()
 		
-		try:
+		#try:
 			member = ctx.author if not member else member
 			member_id = str(member.id)
 			guild_id = str(ctx.guild.id)
@@ -79,7 +79,7 @@ class slashLevel(commands.Cog):
 				percentage = ((user[0]['xp'])/(round((4 * ((user[0]['lvl']) ** 3))/5))) * 100
 					
 				background = Editor("././assets/levelBG2.png")
-				profile = await load_image_async(str(member.avatar.url))
+				profile = await load_image_async(str(member.display_avatar.url))
 
 				profile = Editor(profile).resize((150, 150)).circle_image()
 
@@ -107,7 +107,7 @@ class slashLevel(commands.Cog):
 					percentage = ((user[0]['xp'])/(round((4 * ((user[0]['lvl']) ** 3))/5))) * 100
 					
 					background = Editor("././assets/levelBG2.png")
-					profile = await load_image_async(str(ctx.author.avatar_url))
+					profile = await load_image_async(str(ctx.author.display_avatar.url))
 
 					profile = Editor(profile).resize((150, 150)).circle_image()
 
@@ -130,12 +130,12 @@ class slashLevel(commands.Cog):
 
 					file = File(fp=background.image_bytes, filename="card.png")
 					await ctx.respond(file=file)
-		except:
-			embed = discord.Embed(
-				color = discord.Color.random(),
-				description="> Some error occurred!\nMaybe sending some messages may work!"
-			)	
-			await ctx.respond(embed=embed)
+		# except:
+		# 	embed = discord.Embed(
+		# 		color = discord.Color.random(),
+		# 		description="> Some error occurred!\nMaybe sending some messages may work!"
+		# 	)	
+		# 	await ctx.respond(embed=embed)
 	
 
 	@levelCmd.command(
