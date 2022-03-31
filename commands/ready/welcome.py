@@ -5,7 +5,7 @@ import json
 import aiohttp
 import os
 
-webhookUrl = os.environ.get['welcomeWebhookUrl']
+webhookUrl = os.environ.get('welcomeWebhookUrl')
 
 
 class welcomer(commands.Cog):
