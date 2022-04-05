@@ -19,6 +19,15 @@ class database(commands.Cog):
 			xp integer
 		);
 		""")
+		#for Tags
+		await self.bot.pg_con.execute("""
+		CREATE TABLE IF NOT EXISTS tags
+		(
+			guildId character varying,
+			tag_name character varying,
+			content character varying
+		)
+		""")
 		print("[\] DATABASE READY")
 
 		
