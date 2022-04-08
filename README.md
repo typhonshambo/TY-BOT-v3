@@ -42,7 +42,7 @@ Then Run `main.py`
 
 ### NOTE
 make sure to install the following packages also using `pip install <package_name>` 
-e.g. - `pip install py-cord==2.0.0b5`
+<br>e.g. - `pip install py-cord==2.0.0b5`
 ```txt
 py-cord==2.0.0b5
 easy-pil==0.0.9
