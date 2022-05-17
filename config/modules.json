@@ -19,7 +19,8 @@
         "commands.fun.anime",
 
         "commands.ready.database",
-        "commands.ready.welcome"
+        "commands.ready.welcome",
+        "commands.ready.profilepic"
     ]
    
 }
