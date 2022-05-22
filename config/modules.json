@@ -19,8 +19,10 @@
         "commands.fun.anime",
 
         "commands.ready.database",
-        "commands.ready.welcome",
-        "commands.ready.profilepic"
+        
+        "commands.logger.welcome",
+        "commands.logger.profilepic",
+        "commands.logger.invites"
     ]
    
 }

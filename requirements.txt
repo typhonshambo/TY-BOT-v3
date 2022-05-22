@@ -4,3 +4,4 @@ asyncpg
 flask
 urllib3
 wikipedia
+DiscordUtils
