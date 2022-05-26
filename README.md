@@ -67,9 +67,11 @@ A saperate branch for has been made for heroku [click here](https://github.com/t
 token=Discord Bot token
 database_url=PostGres Database url
 welcomeWebhookUrl=Webhook URL for Welcoming
+inviteLogWebhookUrl=Webhook URL for invite logging
+pfplogWebhookUrl=Webhook URL for Avatar logging
 prefix=Put any value you want
 ```
-<img src="https://i.imgur.com/UivSvkf.png" width=500>
+<img src="https://i.imgur.com/siMd1xt.png" width=500>
 
 # ❓| HAVE ANY QUESTION?
 join our discord server and ping me in chat, i will be happy to help you out :D
