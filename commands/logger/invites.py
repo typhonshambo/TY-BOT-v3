@@ -10,13 +10,13 @@ webhookUrl = os.environ.get('inviteLogWebhookUrl')
 class inviteLog(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
+		self.tracker = DiscordUtils.InviteTracker(bot)
 		
 
 	@commands.Cog.listener() 
 	async def on_member_join(self, member):
 
-		tracker = DiscordUtils.InviteTracker(self.bot)
-		inviter = await tracker.fetch_inviter(member)
+		inviter = await self.tracker.fetch_inviter(member)
 		embed = discord.Embed(
 			color = discord.Color.random(),
 			timestamp=discord.utils.utcnow(),
