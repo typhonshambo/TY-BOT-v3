@@ -21,7 +21,7 @@ class inviteLog(commands.Cog):
 			color = discord.Color.random(),
 			timestamp=discord.utils.utcnow(),
 			description = f"""
-			> {inviter} invited {member.mention}
+			> {inviter.mention} invited {member.mention}
 			"""
 		)
 		embed.set_thumbnail(url=member.display_avatar.url)
