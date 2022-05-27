@@ -18,8 +18,10 @@ class slashLevel(commands.Cog):
 		if message.author == self.bot.user:
 			return
 
-		author_id = str(message.author.id)
-		guild_id = str(message.guild.id)
+		try:
+			author_id = str(message.author.id)
+			guild_id = str(message.guild.id)
+		except: pass
 
 		user = await self.bot.pg_con.fetchrow("SELECT * FROM users WHERE user_id = $1 AND guild_id = $2", author_id, guild_id)
 		
@@ -27,8 +29,10 @@ class slashLevel(commands.Cog):
 			await self.bot.pg_con.execute("INSERT INTO users (user_id, guild_id , lvl, xp) VALUES ($1, $2, 1, 0)", author_id, guild_id)
 		
 		#user = await self.bot.pg_con.fetchrow("SELECT * FROM users WHERE user_id = $1 AND guild_id = $2", author_id, guild_id)
-		await self.bot.pg_con.execute("UPDATE users SET xp = $1 WHERE user_id = $2 AND guild_id = $3", user['xp'] + 1, author_id, guild_id)
-
+		try:
+			await self.bot.pg_con.execute("UPDATE users SET xp = $1 WHERE user_id = $2 AND guild_id = $3", user['xp'] + 1, author_id, guild_id)
+		except: pass
+		
 		cur_xp = user['xp']
 		cur_lvl = user['lvl']
 
