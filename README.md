@@ -38,6 +38,15 @@ Then fill the details in `config/guilds.json`
     
 }
 ```
+Then fill details in `config/webhooks.json`
+</br> </br> just make different channels for logging and make one webhook in each channel and then copy and paste the webhook URL here
+```json
+{
+    "invite": "WEBHOOK_URL",
+    "avatar": "WEBHOOK_URL",
+    "welcoming": "WEBHOOK_URL"
+}
+```
 Then Run `main.py`
 
 ### NOTE
