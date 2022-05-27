@@ -1,14 +1,12 @@
 import discord
 from discord import Webhook
 from discord.ext import commands
-import json
+import os
 import aiohttp
 
 
 
-with open ('././config/webhooks.json', 'r') as f:
-	data = json.load(f)
-	webhookUrl = data['modmail']
+webhookUrl = os.environ.get('modmailWebhookUrl')
 
 class modmail(commands.Cog):
 	def __init__ (self, bot):
