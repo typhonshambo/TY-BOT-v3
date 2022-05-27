@@ -22,7 +22,8 @@
         
         "commands.logger.welcome",
         "commands.logger.profilepic",
-        "commands.logger.invites"
+        "commands.logger.invites",
+        "commands.logger.modmail"
     ]
    
 }
