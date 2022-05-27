@@ -4,9 +4,10 @@ from discord.ext import commands
 import json
 import aiohttp
 
-with open ('././config/botconfig.json', 'r') as f:
+
+with open ('././config/webhooks.json', 'r') as f:
 	data = json.load(f)
-	webhookUrl = data['welcomeWebhookUrl']
+	webhookUrl = data['welcoming']
 
 
 class welcomer(commands.Cog):
