@@ -44,7 +44,8 @@ Then fill details in `config/webhooks.json`
 {
     "invite": "WEBHOOK_URL",
     "avatar": "WEBHOOK_URL",
-    "welcoming": "WEBHOOK_URL"
+    "welcoming": "WEBHOOK_URL",
+    "modmail": "WEBHOOK_URL"
 }
 ```
 Then Run `main.py`
